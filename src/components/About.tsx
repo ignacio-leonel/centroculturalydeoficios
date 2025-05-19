@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users, Lightbulb, GraduationCap } from 'lucide-react';
-import Carousel from './carousel'; // suponiendo que vas a usar un carrusel externo o propio
+import Carousel from './Carousel'; // suponiendo que vas a usar un carrusel externo o propio
 
 const About: React.FC = () => {
   return (
