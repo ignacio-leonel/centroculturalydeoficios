@@ -15,16 +15,16 @@ const Hero: React.FC = () => {
 
       {/* Logo animado */}
       <div
-        
-        className="absolute z-0 animate-slideIn animate-logoPulse"
-        style={{ top: '15%', left: '50%', transform: 'translateX(-50%)' }}
-      >
-        <img
-          src="public/images/logolimpio.png"
-          alt="Imagen animada"
-          className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
-        />
-      </div>
+  className="absolute z-0 animate-slideIn animate-logoPulse"
+  style={{ top: '15%', left: '50%', transform: 'translateX(-50%)' }}
+>
+  <img
+    src="/images/logolimpio.png"
+    alt="Imagen animada"
+    className="w-[300px] h-[200px] object-contain sm:max-w-sm md:max-w-md lg:max-w-lg"
+  />
+</div>
+
 
       {/* Contenido central */}
       <div className="container mx-auto px-4 relative z-10 mt-44">
