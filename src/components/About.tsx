@@ -1,6 +1,5 @@
 import React from 'react';
-import { Users, Lightbulb, GraduationCap } from 'lucide-react';
-import Carousel from './Carousel'; // suponiendo que vas a usar un carrusel externo o propio
+import Carousel from './carousel'; // Asegurate de que Carousel funcione sin modal
 
 const About: React.FC = () => {
   return (
@@ -20,27 +19,10 @@ const About: React.FC = () => {
           <p>Hacé clic en la imagen para ver fotos del lugar y lo que vamos construyendo entre todes.</p>
         </div>
 
-        {/* Imagen destacada que abre el carrusel */}
-        <div className="max-w-4xl mx-auto mb-16 text-center">
-          <div className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
-            {/* Miniatura clickeable */}
-            <img
-              src="/images/localppal.jpeg"
-              alt="Foto del centro"
-              className="rounded-lg shadow-lg mx-auto max-h-[400px] object-cover"
-              onClick={() => {
-                const carousel = document.getElementById('gallery-carousel');
-                if (carousel) carousel.scrollIntoView({ behavior: 'smooth' });
-              }}
-            />
-            <p className="text-sm text-gray-600 mt-2">Tocá la foto para ver más</p>
-          </div>
-        </div>
-
-       
-        {/* Carrusel de fotos */}
-        <div id="gallery-carousel" className="mt-20">
+        {/* Carrusel visible siempre */}
+        <div className="max-w-4xl mx-auto mb-8 text-center">
           <Carousel />
+          <p className="text-sm text-gray-600 mt-4">Imágenes de nuestro rincón, ubicado en Alem y Pueyrredón</p>
         </div>
 
       </div>

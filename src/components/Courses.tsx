@@ -26,7 +26,7 @@ const courses: Course[] = [
     duration: "4 clases mensuales",
     schedule: "Miércoles de 14 a 16",
     cost: "$30.000",
-    image: "/images/grafica_eventos.jpg",
+    image: "/images/grafica_eventos.jpeg",
     images: [
       "/images/grafica2.jpg",
       "/images/grafica3.jpg",
@@ -40,7 +40,7 @@ const courses: Course[] = [
     duration: "8 clases",
     schedule: "Martes de 9 a 13h y  14 a 17 h",
     cost: "$25.000",
-    image: "/images/pasteleria.jpg",
+    image: "/images/pasteleria.jpeg",
     images: [
         "/images/pasteleria1.jpeg",
         "/images/pasteleria2.jpeg"
@@ -53,7 +53,7 @@ const courses: Course[] = [
     duration: "4 clases",
     schedule: "Miércoles de 16 a 17 h",
     cost: "$25.000",
-    image: "/images/taller_sublimacion.jpg",
+    image: "/images/taller_sublimacion.jpeg",
     images: [
       "/images/subli1.jpg",
       "/images/subli2.jpg",
@@ -71,7 +71,7 @@ const courses: Course[] = [
     duration: "8 clases",
     schedule: "Jueves de 9 a 11 h",
     cost: "$40.000",
-    image: "/images/taller_programacion.jpg",
+    image: "/images/taller_programacion.jpeg",
     images: [
     
       "/images/programacion1.jpeg"
@@ -86,7 +86,7 @@ const courses: Course[] = [
     duration: "6 clases",
     schedule: "Lunes de 16 a 18 h",
     cost: "$25.000",
-    image: "images/globologia.jpg",
+    image: "images/globologia.jpeg",
     images: [
       "images/globologia1.jpg",
       "images/globologia2.jpg",
@@ -101,7 +101,7 @@ const courses: Course[] = [
     duration: "8 clases",
     schedule: "viernes de 17 a 19 h",
     cost: "$55.000",
-    image: "/images/macrame.jpg",
+    image: "/images/macrame.jpeg",
     images: [
       "/images/macrame1.jpg",
       "/images/macrame2.jpg",
