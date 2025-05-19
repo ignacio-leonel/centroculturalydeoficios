@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from './carousel'; // Asegurate de que Carousel funcione sin modal
+import Carousel from './Carousel'; // Asegurate de que Carousel funcione sin modal
 
 const About: React.FC = () => {
   return (
