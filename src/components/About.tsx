@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-12 text-lg leading-relaxed">
           <p className="mb-4">Este espacio es de todos y todas, hecho con amor, muchas ganas y esfuerzo colectivo.</p>
           <p className="mb-4">Nos mueve el deseo de compartir, aprender, encontrarnos y transformar. Acercate a los talleres, las actividades o simplemente a conocernos.</p>
-          <p>Hacé clic en la imagen para ver fotos del lugar y lo que vamos construyendo entre todes.</p>
+          <p>Hacé clic en la imagen para ver fotos del lugar y lo que vamos construyendo entre todos y todas.</p>
         </div>
 
         {/* Carrusel visible siempre */}
