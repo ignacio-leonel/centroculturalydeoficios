@@ -11,7 +11,7 @@ const images = [
 ];
 
 interface CarouselProps {
-  onClose: () => void; // función para cerrar el carrusel
+  onClose?: () => void; // función para cerrar el carrusel
 }
 
 const Carousel: React.FC<CarouselProps> = ({ onClose }) => {
