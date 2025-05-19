@@ -1,91 +1,91 @@
 import React from 'react';
-import { MapPin, Instagram, Facebook } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok } from 'react-icons/fa';
+import { MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Centro Cultural y de Oficios</h3>
-            <div className="flex items-center text-gray-400">
-              <MapPin className="h-5 w-5 mr-2" />
-              <p>Leandro N. Alem 4510, esquina Pueyrredón, José C. Paz</p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center justify-items-center items-start">
+
+          {/* Logo */}
+          <div className="flex flex-col items-center justify-center max-w-xs mx-auto">
+            <img
+              src="/images/logo_centro.png"
+              alt="Logo Centro Cultural"
+              className="w-28 h-28 object-contain"
+            />
           </div>
 
-          <div className="flex flex-col items-center">
-            <h3 className="text-xl font-bold mb-4">Seguinos</h3>
-            <div className="flex justify-center items-center space-x-4">
-              {/* Facebook */}
-              <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors duration-300"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
+          {/* Dirección */}
+          <div className="flex flex-col items-center justify-center max-w-xs mx-auto">
+  <h3 className="text-xl font-bold mb-3">
+    Centro Cultural y de Oficios
+  </h3>
+  <a
+    href="https://maps.app.goo.gl/Ah7Ub9dr88mSNTAk8"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center text-gray-400 mb-1 hover:text-[#7ed957] transition"
+    aria-label="Ubicación"
+  >
+    {/* Icono centrado sobre la dirección */}
+    <MapPin className="h-6 w-6 mb-1" />
 
-              {/* Instagram */}
-              <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors duration-300"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
+    <span className="text-center">
+      Leandro N. Alem 4510, esquina Pueyrredón<br/>
+      José C. Paz
+    </span>
+  </a>
+</div>
 
-              {/* TikTok (SVG custom) */}
-              <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors duration-300"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 8v7.5a2.25 2.25 0 1 0 4.5 0v-11a4.5 4.5 0 0 0 4.5 4.5"
-                  />
-                </svg>
-              </a>
 
-              {/* WhatsApp (SVG matching style) */}
+          {/* Redes Sociales */}
+          <div className="flex flex-col items-center justify-center max-w-xs mx-auto">
+            <h3 className="text-xl font-bold mb-3">Seguinos</h3>
+            <div className="flex space-x-6 justify-center">
               <a
-                href="https://wa.me/541156417859"
+                href="https://www.facebook.com/profile.php?id=61573446546602"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-600 transition-colors duration-300"
+                className="hover:text-[#7ed957] transition"
+                aria-label="Facebook"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16 12c-.5.5-1.5 1.5-2.5 0s-2-2-3-1 0 2 1 3 3 1.5 4 .5"
-                  />
-                </svg>
+                <FaFacebookF size={30} color="white" />
+              </a>
+              <a
+                href="https://www.instagram.com/centroculturaldeoficios"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#7ed957] transition"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={30} color="white" />
+              </a>
+              <a
+                href="https://wa.me/5491149728753"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#7ed957] transition"
+                aria-label="Whatsapp"
+              >
+                <FaWhatsapp size={30} color="white" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@centro.cultural.doficios"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#7ed957] transition"
+                aria-label="Tiktok"
+              >
+                <FaTiktok size={30} color="white" />
               </a>
             </div>
           </div>
+
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Centro Cultural y de Oficios. Todos los derechos reservados.</p>
         </div>
       </div>

@@ -3,67 +3,119 @@ import { Link } from 'react-scroll';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative text-white min-h-screen flex items-center"
-    style={{ backgroundColor: '#00bf63' }}>
+    <section
+      className="relative text-white min-h-screen flex items-center justify-center"
+      style={{ backgroundColor: '#00bf63' }}
+    >
+      {/* Fondo oscuro */}
       <div className="absolute inset-0 bg-black opacity-30"></div>
-      <div className="absolute inset-0 bg-cover bg-center"
-  style={{ backgroundImage: "url('/images/localcentro.png')", opacity: 0.5 }}
+
+      {/* Imagen de fondo opcional */}
+      <div className="absolute inset-0 bg-cover bg-center"></div>
+
+      {/* Logo animado */}
+      <div
         
-      ></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+        className="absolute z-0 animate-slideIn animate-logoPulse"
+        style={{ top: '15%', left: '50%', transform: 'translateX(-50%)' }}
+      >
+        <img
+          src="public/images/logolimpio.png"
+          alt="Imagen animada"
+          className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+        />
+      </div>
+
+      {/* Contenido central */}
+      <div className="container mx-auto px-4 relative z-10 mt-44">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Aprendé, crecé y conectá con tu futuro
-          </h1>
-          <p className="text-xl md:text-2xl mb-8">
-            Centro cultural y de oficios dedicado a poder hacer que todos los paceños puedan
-            adquirir conocimientos que ayuden a expandir sus posibilidades de insertarse en el mercado laboral
-                    </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          {/* Texto animado con delay */}
+          <div
+            className="text-xl md:text-2xl opacity-0 animate-fadeInText space-y-4"
+            style={{ color: 'white' }}
+          >
+            <p>Espacio dedicado a acercar a los vecinos paceños la posibilidad de capacitarse en oficios mediante cursos y talleres.</p>
+            <p>Te invitamos a conocer las propuestas que tenemos en este momento y a conocer un poco más acerca de esta comunidad.</p>
+          </div>
+
+          {/* Botón animado con pop effect */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-fadeInButton mt-6">
             <Link
-              to="courses"
+              to="about"
               smooth={true}
               duration={500}
-              className="bg-white text-green-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 cursor-pointer text-center"
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-800 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center animate-popIn"
             >
-              Ver Cursos
-            </Link>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-800 transition-colors duration-300 cursor-pointer text-center"
-            >
-              Inscribirme
+              Ingresar al sitio
             </Link>
           </div>
         </div>
       </div>
+
       
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center">
-        <Link
-          to="about"
-          smooth={true}
-          duration={500}
-          className="animate-bounce cursor-pointer"
-        >
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          >
-            <path d="M12 19V5"/>
-            <path d="m5 12 7 7 7-7"/>
-          </svg>
-        </Link>
-      </div>
+
+      {/* Animaciones personalizadas */}
+      <style>
+        {`
+          @keyframes slideIn {
+            0% {
+              transform: translateX(-100%) translateY(0);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(-50%) translateY(0);
+              opacity: 1;
+            }
+          }
+
+          @keyframes fadeInText {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+
+          @keyframes fadeInButton {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+          }
+
+          .animate-slideIn {
+            animation: slideIn 1.5s ease-out forwards;
+          }
+
+          .animate-fadeInText {
+            animation: fadeInText 1s ease-out forwards;
+            animation-delay: 2s;
+          }
+
+          .animate-fadeInButton {
+            animation: fadeInButton 1s ease-out forwards;
+            animation-delay: 4s;
+          }
+
+          @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+          }
+
+          .animate-popIn {
+            animation: popIn 0.6s ease-out forwards;
+            animation-delay: 4.2s;
+          }
+            @keyframes logoPulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.03);
+  }
+}
+
+.animate-logoPulse {
+  animation: logoPulse 6s ease-in-out infinite;
+}
+
+        `}
+      </style>
     </section>
   );
 };
